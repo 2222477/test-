@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบบุคลิกภาพ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333399;
+            color: blue;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .results {
+            background-color: #e7f3fe;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+        <!-- ให้นักเรียนอ่านข้อความดังต่อไปนี้ แล้วพิจารณาเลือกหมายเลขตัวใดตัวหนึ่งดังต่อไปนี้คือ ชอบ ไม่แน่ใจ และ ไม่ชอบ 
+โดยนักเรียนเลือกหมายเลขที่ตรงกับตัวเองที่สุด การแปลผลคือการดูคะแนนสูงสุดจากผลการทดสอบ คะแนนบุคลิกไหนสูงสุดก็แสดงว่านักเรียนมีบุคลิกภาพหลักแบบนั้น ซึ่งสัมพันธ์กับการเลือกอาชีพในอนาคต ทั้งนี้คะแนนบุคลิกที่รองลงมาก็จะเป็นบุคลิกรอง แต่ในกรณีได้คะแนนเท่ากันสองบุคลิก หรือใกล้เคียงกันหลายแบบ จะแสดงผลว่านักเรียนที่ใกล้เคียงกัน ไม่โดดเด่น แต่มีข้อดีคือสามารถปรับตัวในสังคมได้ดี อยู่ได้ในทุกสภาพแวดล้อม  -->
+        <h1>	แบบทดสอบความสนใจทางอาชีพ John L. Holland</h1>
+	<h2>	กลุ่มสาระการเรียนรู้แนะแนว โรงเรียนมหาวชิราวุธ จังหวัดสงขลา</h2>
+        <h3>พัฒนาเว็บไซต์โดย: นายวรินทร คงแก้ว 
+	คณะครุศาสตร์ สาขาจิตวิทยาฯ มหาวิทยาลัยราชภัฏสงขลา</h3>
+	<p>ที่มาข้อมูล แบบทดสอบนี้พัฒนาขึ้นจากแหล่งข้อมูลต้นฉบับโดย นายฤชุชัย โปธา จัดหางานจังหวัดแม่ฮ่องสอน ใช้เพื่อการศึกษาเท่านั้น</p>
+        <p>คำชี้แจง : ให้นักเรียนอ่านข้อความดังต่อไปนี้ แล้วพิจารณาเลือกหมายเลขตัวใดตัวหนึ่งดังต่อไปนี้คือ 
+3 หมายถึง ชอบ 2 หมายถึง ไม่แน่ใจ และ 1 หมายถึง ไม่ชอบ</p> 
+
+	<p>โดยเลือกหมายเลขที่ตรงกับตัวเองที่สุด การแปลผลคือการดูคะแนนสูงสุดจากผลการทดสอบ คะแนนบุคลิกไหนสูงสุดก็แสดงว่านักเรียนมีบุคลิกภาพหลักแบบนั้น ซึ่งสัมพันธ์กับการเลือกอาชีพในอนาคต ทั้งนี้คะแนนบุคลิกที่รองลงมาก็จะเป็นบุคลิกรอง แต่ในกรณีได้คะแนนเท่ากันสองบุคลิก หรือใกล้เคียงกันหลายแบบ จะแสดงผลว่านักเรียนที่ใกล้เคียงกัน ไม่โดดเด่น แต่มีข้อดีคือสามารถปรับตัวในสังคมได้ดี อยู่ได้ในทุกสภาพแวดล้อม</p>
+        
+	<p>แบบทดสอบนี้จะช่วยให้นักเรียนเข้าใจบุคลิกภาพ ค่านิยม หรือพรสวรรค์ ความสนใจของนักเรียน และสามารถป็นแนวทางในการประกอบอาชีพ 
+ผ่านการบูรณาการทฤษฎี Trait and Factor Theory ที่มีแนวคิดว่ามนุษย์ใช้วิจารณญาณตัดสินใจเลือกอาชีพโดยอาศัยหลักวิเคราะห์ตนเอง</p>
+	<p>กรุณากรอกข้อมูลส่วนตัวและตอบคำถามเพื่อทดสอบความสนใจทางอาชีพ</p>
+
+        <!-- ฟอร์มสำหรับการกรอกข้อมูล -->
+        <form action="send_email.php" method="POST">
+            <div class="question-section">
+                <label for="name">ชื่อ-สกุล:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+ 	        <div class="question-section">
+                <label for="Class">ชั้นมัธยมศึกษาปีที่.../...</label>
+                <input type="text" id="Class" name="Class" required>
+            </div>
+	     
+	    <div class="question-section">
+                <label for="Number">เลขที่</label>
+                <input type="text" id="Number" name="Number" required>
+            </div>
+    <!-- คำถาม 1 -->
+    <div class="question" data-personality="R">
+        <img src="https://images.workpointtoday.com/workpointnews/2018/08/24070245/1535068962_31567_-1200x630.jpg" alt="รูปภาพคำถาม 1">
+        <p>คำถาม 1: ออกกำลังกาย/เล่นกีฬา</p>
+        <label><input type="radio" name="question1" value="3"> ชอบ</label><br>
+        <label><input type="radio" name="question1" value="2"> ไม่แน่ใจ</label><br>
+        <label><input type="radio" name="question1" value="1"> ไม่ชอบ</label>
+    </div>
+
+    <!-- คำถาม 2 -->
+    <div class="question" data-personality="I">
+        <img src="https://www.prachachat.net/wp-content/uploads/2023/06/11-1-%E0%B9%84%E0%B8%9E%E0%B8%9A%E0%B8%B9%E0%B8%A5%E0%B8%A2%E0%B9%8C-%E0%B8%99%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B9%E0%B8%A3-2-728x485.jpg" alt="รูปภาพคำถาม 2">
+        <p>คำถาม 2: วิเคราะห์ภาวะเศรษฐกิจ</p>
+        <label><input type="radio" name="question2" value="3"> ชอบ</label><br>
+        <label><input type="radio" name="question2" value="2"> ไม่แน่ใจ</label><br>
+        <label><input type="radio" name="question2" value="1"> ไม่ชอบ</label>
+    </div>
+
+ <!-- คำถาม 3 -->
+<div class="question" data-personality="S">
+    <img src="https://entertain.teenee.com/thaistar/img4/760640.jpg" alt="รูปภาพคำถาม 3">
+    <p>คำถาม 3: อยากอยู่กับเพื่อนเยอะ ๆ </p>
+    <label><input type="radio" name="question3" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question3" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question3" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 4 -->
+<div class="question" data-personality="C">
+    <img src="https://s.isanook.com/mn/0/ud/108/544145/group-of-asian-students.jpg" alt="รูปภาพคำถาม 4">
+    <p>คำถาม 4: ทำงานตามตัวอย่างมากว่าให้คิดเอาเอง</p>
+    <label><input type="radio" name="question4" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question4" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question4" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 5 -->
+<div class="question" data-personality="E">
+        <img src="https://www.tnnthailand.com/static/images/99ded4dd-0591-489d-86f3-c77e2ace7117.jpg" alt="รูปภาพคำถาม 5">
+    <p>คำถาม 5: อยากเล่นการเมือง</p>
+    <label><input type="radio" name="question5" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question5" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question5" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 6 -->
+<div class="question" data-personality="A">
+    <img src="https://promotions.co.th/wp-content/uploads/2023/12/homestay.jpg" alt="รูปภาพคำถาม 6">
+    <p>คำถาม 6: =ชอบอยู่คนเดียว</p>
+    <label><input type="radio" name="question6" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question6" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question6" value="1"> ไม่ชอบ</label>
+</div>
+
+
+<!-- คำถาม 7 -->
+<div class="question" data-personality="R">
+        <img src="https://storage.thaipost.net/main/uploads/photos/big/20210719/image_big_60f51520da9f3.jpg" alt="รูปภาพคำถาม 7">
+    <p>คำถาม 7: ออกสำรวจหาข้อมูลผู้ว่างงานในหมู่บ้าน</p>
+    <label><input type="radio" name="question7" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question7" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question7" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 8 -->
+<div class="question" data-personality="I">
+    <img src="https://i.ytimg.com/vi/8QL9b0zA2is/maxresdefault.jpg" alt="รูปภาพคำถาม 8">
+    <p>คำถาม 8: วิชาวิทยาศาสตร์</p>
+    <label><input type="radio" name="question8" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question8" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question8" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 9 -->
+<div class="question" data-personality="S">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmmfsXVMcOmT0zzEZwJhAFw9Az2EPtJ1oLKMiNuPApl5v9iVnbPiyucbHm_MBc4NUqip26JYeIsERyawAuSLlby5s-GWlVlabtR7RCMuaJQ2L9ZrkqMvk2Pnh2wFJJ79nyyAn47pooCK8/s1600/46091095_351929752039290_3584801213884923904_n.png" alt="รูปภาพคำถาม 9">
+    <p>คำถาม 9: นักสังคมสงเคราะห์</p>
+    <label><input type="radio" name="question9" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question9" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question9" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 10 -->
+<div class="question" data-personality="C">
+        <img src="https://www.quickserv.co.th/products/update/20190418-081118-solution.jpg" alt="รูปภาพคำถาม 10">
+    <p>คำถาม 10: เจ้าหน้าที่บันทึกข้อมูล</p>
+    <label><input type="radio" name="question10" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question10" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question10" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 11 -->
+<div class="question" data-personality="E">
+    <img src="https://www.wallstreetenglish.in.th/wp-content/uploads/2019/04/shutterstock_649180078-1.jpg" alt="รูปภาพคำถาม 11">
+    <p>คำถาม 11: นักเล่นหุ้น นักเศรษฐศาสตร์ นักธุรกิจ</p>
+    <label><input type="radio" name="question11" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question11" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question11" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 12 -->
+<div class="question" data-personality="A">
+    <img src="https://fuzik.co/wp-content/uploads/2023/07/7F4DBFB6-458A-436A-A452-CFD9A22B5ACC-edited.webp" alt="รูปภาพคำถาม 12">
+    <p>คำถาม 12: นักร้อง นักแสดง</p>
+    <label><input type="radio" name="question12" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question12" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question12" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 13 -->
+<div class="question" data-personality="R">
+    <img src="https://images.workpointtoday.com/workpointnews/2019/07/09195723/1562677038_10609_5.jpg" alt="รูปภาพคำถาม 13">
+    <p>คำถาม 13: เป็นนายช่าง / คนควบคุมการก่อสร้าง</p>
+    <label><input type="radio" name="question13" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question13" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question13" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 14 -->
+<div class="question" data-personality="I">
+       <img src="https://www.ziprecruiter.com/svc/fotomat/public-ziprecruiter/cms/655260032EntryLevelCorporateFinancialAnalyst.jpg=ws1280x960" alt="รูปภาพคำถาม 14">
+    <p>คำถาม 14: เจ้าหน้าที่วิเคราะห์แผนงานและนโยบาย</p>
+    <label><input type="radio" name="question14" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question14" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question14" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 15 -->
+<div class="question" data-personality="S">
+    <img src="https://t4.ftcdn.net/jpg/01/92/13/65/360_F_192136561_9jE272lofBue3oF1ZyfdLJKvLzpg9EN9.jpg" alt="รูปภาพคำถาม 15">
+    <p>คำถาม 15: เจ้าหน้าที่ฝ่ายบุคคล</p>
+    <label><input type="radio" name="question15" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question15" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question15" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 16 -->
+<div class="question" data-personality="C">
+        <img src="https://www.smethailandclub.com/images/image/1441621944.jpg" alt="รูปภาพคำถาม 16">
+    <p>คำถาม 16: พนักงานคลังสินค้าบัญชี</p>
+    <label><input type="radio" name="question16" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question16" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question16" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 17 -->
+<div class="question" data-personality="E">
+    <img src="https://www.sales100million.com/wp-content/uploads/2020/07/b8ae03_95bfca0e8c2a4ee1b6b54b719147df50-mv2.jpg" alt="รูปภาพคำถาม 17">
+    <p>คำถาม 17: ขายประกัน ขายตรง</p>
+    <label><input type="radio" name="question17" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question17" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question17" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 18 -->
+<div class="question" data-personality="A">
+    <img src="https://cdn-img.wecomics.in.th/user/25731295/blog/637596069586187760.jpg" alt="รูปภาพคำถาม 18">
+    <p>คำถาม 18: นักเขียนการ์ตูน</p>
+    <label><input type="radio" name="question18" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question18" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question18" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 19 -->
+<div class="question" data-personality="R">
+    <img src="https://www.khaosod.co.th/wpapp/uploads/2018/06/S__14205114.jpg" alt="รูปภาพคำถาม 19">
+    <p>คำถาม 19: ผู้จัดการทีม โค้ช</p>
+    <label><input type="radio" name="question19" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question19" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question19" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 20 -->
+<div class="question" data-personality="I">
+    <img src="https://cbtthailand.dasta.or.th/upload-file-api/Resources/Attraction/Images/ATT720010/5.jpg" alt="รูปภาพคำถาม 20">
+    <p>คำถาม 20: ศึกษาเรื่องยาสมุนไพร</p>
+    <label><input type="radio" name="question20" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question20" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question20" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 21 -->
+<div class="question" data-personality="S">
+    <img src="https://unannocontrolospreco.org/wp-content/uploads/2020/10/%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3-%E2%80%9C%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B9%80%E0%B8%AA%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%A2%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%A1%E2%80%9D-%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%A3%E0%B8%A7%E0%B8%9A%E0%B8%A3%E0%B8%B1%E0%B8%94-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%9E%E0%B8%87%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B9%86%E0%B9%83%E0%B8%99%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B0%E0%B8%AA%E0%B8%B1%E0%B9%89%E0%B8%99-2.jpg" alt="รูปภาพคำถาม 21">
+    <p>คำถาม 21: ช่างเสริมสวย</p>
+    <label><input type="radio" name="question21" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question21" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question21" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 22 -->
+<div class="question" data-personality="C">
+    <img src="https://watermark.lovepik.com/photo/50118/7333_lovepik-business-womens-workplace-office-photo-image_wh1200.jpg" alt="รูปภาพคำถาม 22">
+    <p>คำถาม 22: สเมียน ธุรการ</p>
+    <label><input type="radio" name="question22" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question22" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question22" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 23 -->
+<div class="question" data-personality="E">
+    <img src="https://files.vogue.co.th/uploads/detail3nw9.jpg" alt="รูปภาพคำถาม 23">
+    <p>คำถาม 23: ทำธุรกิจ การค้า</p>
+    <label><input type="radio" name="question23" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question23" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question23" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 24 -->
+<div class="question" data-personality="A">
+    <img src="https://media.readthecloud.co/wp-content/uploads/2022/07/29103057/sala-khunnawut-29-750x500.jpg" alt="รูปภาพคำถาม 24">
+    <p>คำถาม 24: นักประพันธ์เพลง</p>
+    <label><input type="radio" name="question24" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question24" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question24" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 25 -->
+<div class="question" data-personality="R">
+    <img src="https://f.ptcdn.info/554/008/000/1376811060-image-o.jpg" alt="รูปภาพคำถาม 25">
+    <p>คำถาม 25: งานสืบสวน สอบสวน</p>
+    <label><input type="radio" name="question25" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question25" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question25" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 26 -->
+<div class="question" data-personality="I">
+    <img src="https://northlightcenter.com/wp-content/uploads/2022/01/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B8%84%E0%B8%B3%E0%B8%9B%E0%B8%A3%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2-800x500.jpg" alt="รูปภาพคำถาม 26">
+    <p>คำถาม 26: รับปรึกษาปัญหาต่าง ๆ ให้เพื่อน</p>
+    <label><input type="radio" name="question26" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question26" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question26" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 27 -->
+<div class="question" data-personality="S">
+    <img src="https://www.thaihoteldeal.com/images/images-data/news/images/20200430110231_expo_9920.jpg" alt="รูปภาพคำถาม 27">
+    <p>คำถาม 27: ประชาสัมพันธ์โรงแรม</p>
+    <label><input type="radio" name="question27" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question27" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question27" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 28 -->
+<div class="question" data-personality="C">
+    <img src="https://www.thaifranchisecenter.com/document/sme/picture/document_4987_p7_20190904151631.jpg" alt="รูปภาพคำถาม 28">
+    <p>คำถาม 28: พนักงานธนาคาร</p>
+    <label><input type="radio" name="question28" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question28" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question28" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 29 -->
+<div class="question" data-personality="E">
+    <img src="https://contents.bu.ac.th/contents/files/uploads/5f8a0ad5-d358-42fd-8472-3293e207a940.webp" alt="รูปภาพคำถาม 29">
+    <p>คำถาม 29: ทนายความ</p>
+    <label><input type="radio" name="question29" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question29" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question29" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 30 -->
+<div class="question" data-personality="A">
+    <img src="https://s.isanook.com/jo/0/ud/483/2417225/ahr0chm6ly9zlmlzyw5vb2suy29tl.jpg?ip/resize/w728/q80/jpg" alt="รูปภาพคำถาม 30">
+    <p>คำถาม 30: นักดนตรี</p>
+    <label><input type="radio" name="question30" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question30" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question30" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 31 -->
+<div class="question" data-personality="R">
+    <img src="https://img.icarcdn.com/autospinn/body/921656_nnrmED1EyLWGuUEFccSJC7.jpg" alt="รูปภาพคำถาม 31">
+    <p>คำถาม 31: นักแข่งรถ</p>
+    <label><input type="radio" name="question31" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question31" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question31" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 32 -->
+<div class="question" data-personality="I">
+    <img src="https://www.technologychaoban.com/wp-content/uploads/2019/06/6-13.jpg" alt="รูปภาพคำถาม 32">
+    <p>คำถาม 32: นักเพาะเลี้ยงปลาสวยงาม</p>
+    <label><input type="radio" name="question32" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question32" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question32" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 33 -->
+<div class="question" data-personality="S">
+    <img src="https://media.komchadluek.net/uploads/images/md/2023/05/XyyzLnwH8hhgYeqbxLsI.webp?x-image-process=style/lg-webp" alt="รูปภาพคำถาม 33">
+    <p>คำถาม 33: ครู อาจารย์</p>
+    <label><input type="radio" name="question33" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question33" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question33" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 34 -->
+<div class="question" data-personality="C">
+    <img src="https://www.salika.co/wp-content/uploads/2020/09/secretary-good-career-10.jpg" alt="รูปภาพคำถาม 34">
+    <p>คำถาม 34: เลขานุการ</p>
+    <label><input type="radio" name="question34" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question34" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question34" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 35 -->
+<div class="question" data-personality="E">
+    <img src="https://s359.kapook.com/pagebuilder/704fb94c-e49f-4fe3-aabc-200cad00c061.jpg" alt="รูปภาพคำถาม 35">
+    <p>คำถาม 35: พิธีกร</p>
+    <label><input type="radio" name="question35" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question35" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question35" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 36 -->
+<div class="question" data-personality="A">
+    <img src="https://st4.depositphotos.com/1000975/19994/i/1600/depositphotos_199945706-stock-photo-woman-architect-working-on-the.jpg" alt="รูปภาพคำถาม 36">
+    <p>คำถาม 36: สถาปนิก จิตรกร</p>
+    <label><input type="radio" name="question36" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question36" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question36" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 37 -->
+<div class="question" data-personality="R">
+    <img src="https://media.istockphoto.com/id/1054183578/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B8%8A%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%A3%E0%B8%96%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%96%E0%B8%B7%E0%B8%AD%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%9E%E0%B8%B9%E0%B8%94%E0%B8%84%E0%B8%B8%E0%B8%A2%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%84%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%8D%E0%B8%B4%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%9C%E0%B8%B4%E0%B8%94%E0%B8%9E%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B9%8C%E0%B9%83%E0%B8%99%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%8B%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%A3%E0%B8%96%E0%B8%A2%E0%B8%99.jpg?s=612x612&w=0&k=20&c=l7c2KMHKk6r_WErqJmZg9pbND-vNRC9DgjsBV5td27k=" alt="รูปภาพคำถาม 37">
+    <p>คำถาม 37: ช่างซ่อมบำรุงต่าง ๆ</p>
+    <label><input type="radio" name="question37" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question37" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question37" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 38 -->
+<div class="question" data-personality="I">
+    <img src="https://lh4.googleusercontent.com/proxy/78x7cQJBzhLzi131YnVNk92WZED2gcm0gZpekxtnnz5zjKd7dmoSjCkySpHveogTaMxzRXcScslW7KF-NkNtcF-H-hG5yN8sO34q" alt="รูปภาพคำถาม 38">
+    <p>คำถาม 38: สะสมของโบราณ</p>
+    <label><input type="radio" name="question38" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question38" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question38" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 39 -->
+<div class="question" data-personality="S">
+    <img src="https://image.posttoday.com/media/content/2015/11/10/EA8F428125214A1C89CAE3F9DCF5E4C1.jpg" alt="รูปภาพคำถาม 39">
+    <p>คำถาม 39: ช่วยเหลือคนบาดเจ็บ</p>
+    <label><input type="radio" name="question39" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question39" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question39" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 40 -->
+<div class="question" data-personality="C">
+    <img src="https://s359.kapook.com/pagebuilder/c27e2bd7-59a9-49a0-99ed-27e2fee607d9.jpg" alt="รูปภาพคำถาม 40">
+    <p>คำถาม 40: พนักงานสินเชื่อ เจ้าหน้าที่การเงิน</p>
+    <label><input type="radio" name="question40" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question40" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question40" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 41 -->
+<div class="question" data-personality="E">
+    <img src="https://lh6.googleusercontent.com/proxy/LbjjPsXwYjdUw3l1FVu2iWktOGrxNkDhLP-oAyaiGG1CmuHSx76PaGMqILxlo2rOyQF7ox6c8ueDSO2Bv_D9fasmU9EIT9jk0QkAWZPn7qjECAV0PMCV0v838HfXuT_is6Cv" alt="รูปภาพคำถาม 41">
+    <p>คำถาม 41: ตัวแทนโต้วาทีของโรงเรียน</p>
+    <label><input type="radio" name="question41" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question41" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question41" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 42 -->
+<div class="question" data-personality="A">
+    <img src="https://www.matichon.co.th/wp-content/uploads/2019/10/MU-Choir.jpg" alt="รูปภาพคำถาม 42">
+    <p>คำถาม 42: ผู้เรียบเรียงเสียงประสาน</p>
+    <label><input type="radio" name="question42" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question42" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question42" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 43 -->
+<div class="question" data-personality="R">
+    <img src="https://siamgenerator.com/wp-content/uploads/2024/02/male-asian-engineer-professional-having-discussion-standing-concult-cnc-machine-factory-two-asian-coworker-brainstorm-explaining-solves-process-cnc-operate-machine-1.webp" alt="รูปภาพคำถาม 43">
+    <p>คำถาม 43: ช่างเครื่องกล ช่างยนต์</p>
+    <label><input type="radio" name="question43" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question43" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question43" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 44 -->
+<div class="question" data-personality="I">
+    <img src="https://image.dek-d.com/27/0551/7143/121255397" alt="รูปภาพคำถาม 44">
+    <p>คำถาม 44: เปิดร้านขายยา</p>
+    <label><input type="radio" name="question44" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question44" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question44" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 45 -->
+<div class="question" data-personality="S">
+    <img src="https://static.thairath.co.th/media/PZnhTOtr5D3rd9ocLD7cmYJJDaL9hUvQmKhCAexjmvQ1oMs.webp" alt="รูปภาพคำถาม 45">
+    <p>คำถาม 45: นักจัดรายการวิทยุ</p>
+    <label><input type="radio" name="question45" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question45" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question45" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 46 -->
+<div class="question" data-personality="C">
+    <img src="https://media.istockphoto.com/id/1126636109/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%A1%E0%B8%B8%E0%B8%94%E0%B9%83%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5%E0%B9%80%E0%B8%AB%E0%B8%99%E0%B8%B7%E0%B8%AD.jpg?s=612x612&w=0&k=20&c=EE5eEPWytrIrPR2MvxJn06M5-Qd3HrmNojyhG1PYwgg=" alt="รูปภาพคำถาม 46">
+    <p>คำถาม 46: เจ้าหน้าที่ห้องสมุด</p>
+    <label><input type="radio" name="question46" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question46" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question46" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 47 -->
+<div class="question" data-personality="E">
+    <img src="https://www.nampangnan.go.th/dnm_file/news/1691647771233_8057_center.jpg" alt="รูปภาพคำถาม 47">
+    <p>คำถาม 47: กำนัน ผู้ใหญ่บ้าน อบต.</p>
+    <label><input type="radio" name="question47" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question47" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question47" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 48 -->
+<div class="question" data-personality="A">
+    <img src="https://ceresaperfume.com/wp-content/uploads/2019/03/Ad-Magazine-Set_%E0%B9%91%E0%B9%99%E0%B9%90%E0%B9%93%E0%B9%90%E0%B9%91_0006-838x1024.jpg" alt="รูปภาพคำถาม 48">
+    <p>คำถาม 48: นางแบบ นายแบบ</p>
+    <label><input type="radio" name="question48" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question48" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question48" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 49 -->
+<div class="question" data-personality="R">
+    <img src="https://cib.go.th/backend/uploads/medium_2_3_2_324358bdc5_0963a5a08b.png" alt="รูปภาพคำถาม 49">
+    <p>คำถาม 49: ทหาร ตำรวจปราบปราม</p>
+    <label><input type="radio" name="question49" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question49" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question49" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 50 -->
+<div class="question" data-personality="I">
+    <img src="https://www.limestone.edu/sites/default/files/styles/social_large/public/2022-03/computer-programmer.jpg?h=3d15c898&itok=LCrU37BI" alt="รูปภาพคำถาม 50">
+    <p>คำถาม 50: นักเขียนโปรแกรมคอมพิวเตอร์</p>
+    <label><input type="radio" name="question50" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question50" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question50" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 51 -->
+<div class="question" data-personality="S">
+    <img src="https://static.thairath.co.th/media/Dtbezn3nNUxytg04OWAyE1ax1ii5gS9lT3PfdbKhxWthOz.jpg" alt="รูปภาพคำถาม 51">
+    <p>คำถาม 51: พระสงฆ์ ผู้นำศาสนา</p>
+    <label><input type="radio" name="question51" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question51" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question51" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 52 -->
+<div class="question" data-personality="C">
+    <img src="https://www.supersafetythailand.com/wp-content/uploads/2019/01/%E0%B8%8A%E0%B8%B8%E0%B8%94-%E0%B8%A3%E0%B8%9B%E0%B8%A0-2.jpg" alt="รูปภาพคำถาม 52">
+    <p>คำถาม 52: พนักงานรักษาความปลอดภัย</p>
+    <label><input type="radio" name="question52" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question52" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question52" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 53 -->
+<div class="question" data-personality="E">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyLx5tIn9bodYuNE6rFkY_ZfYAwUqZXSke3Q&s" alt="รูปภาพคำถาม 53">
+    <p>คำถาม 53: ผู้พิพากษา</p>
+    <label><input type="radio" name="question53" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question53" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question53" value="1"> ไม่ชอบ</label>
+</div>
+
+<!-- คำถาม 54 -->
+<div class="question" data-personality="A">
+    <img src="https://assets.brandinside.asia/uploads/2019/05/shutterstock_1042717348.jpg" alt="รูปภาพคำถาม 54">
+    <p>คำถาม 54: นักข่าว</p>
+    <label><input type="radio" name="question54" value="3"> ชอบ</label><br>
+    <label><input type="radio" name="question54" value="2"> ไม่แน่ใจ</label><br>
+    <label><input type="radio" name="question54" value="1"> ไม่ชอบ</label>
+</div>
+
+
+
+
+
+    <button onclick="calculateResults()">ส่งคำตอบ</button>
+
+    <!-- ผลลัพธ์ -->
+<div class="results" id="results" style="display:none;">
+    <h3>ผลลัพธ์บุคลิกภาพของคุณ:</h3>
+    <p id="personalityResult"></p>
+    <p id="personalityDescription"></p> <!-- แสดงคำอธิบายบุคลิกภาพ -->
+</div>
+
+<script>
+    function calculateResults() {
+        const questions = document.querySelectorAll('.question');
+        const scores = { R: 0, I: 0, S: 0, C: 0, E: 0, A: 0 };
+
+        questions.forEach((question) => {
+            const personality = question.getAttribute('data-personality');
+            const selectedOption = question.querySelector('input[type="radio"]:checked');
+
+            if (selectedOption) {
+                const score = parseInt(selectedOption.value);
+                scores[personality] += score;
+            }
+        });
+
+        // หาบุคลิกที่มีคะแนนสูงสุด
+        let maxPersonality = '';
+        let maxScore = 0;
+        for (const personality in scores) {
+            if (scores[personality] > maxScore) {
+                maxScore = scores[personality];
+                maxPersonality = personality;
+            }
+        }
+
+        // คำอธิบายบุคลิกภาพ
+        const personalityDescriptions = {
+            R: `
+                <strong>บุคลิก R (Realistic):</strong> บุคลิกที่ชอบการทำงานที่ใช้มือหรือเครื่องมือ
+                <p><strong>ลักษณะเด่น:</strong>
+                ชอบการทำงานที่ต้องใช้ทักษะทางกายภาพหรือเครื่องมือ<br>
+                มีความชำนาญในการใช้เครื่องมือและเครื่องจักร<br>
+                มักมีความสนใจในเรื่องที่เกี่ยวข้องกับการซ่อมแซม การสร้าง หรือการดำเนินงานที่เป็นรูปธรรม<br>
+                ชอบการทำงานที่เห็นผลลัพธ์ทันที</p>
+                <p><strong>แผนการเรียน:</strong>
+                เรียนวิชาที่เน้นการปฏิบัติ เช่น วิชาช่าง วิศวกรรมศาสตร์ เกษตรศาสตร์ เทคโนโลยี หรือสาขาที่เกี่ยวกับเครื่องมือและเครื่องจักร</p>
+                <p><strong>อาชีพที่สอดคล้อง:</strong>
+                วิศวกรเครื่องกล, ช่างซ่อมเครื่องจักร, ช่างทำผม, ช่างตัดเสื้อ, ช่างยนต์, นักบิน, ครูวิชาช่างซ่อมเครื่องจักร, ครูวิชาการเกษตร</p>
+            `,
+            I: `
+                <strong>บุคลิก I (Investigative):</strong> บุคลิกที่ชอบการวิเคราะห์และคิดเชิงวิทยาศาสตร์
+                <p><strong>ลักษณะเด่น:</strong>
+                ชอบการค้นคว้าและแก้ปัญหาด้วยการใช้ข้อมูลและเหตุผล<br>
+                มีความสนใจในการศึกษาวิธีการต่างๆ และมักจะต้องการคำตอบในปัญหาที่ยาก<br>
+                มีทักษะในการคิดเชิงวิทยาศาสตร์ วิเคราะห์ และหาคำอธิบายจากหลักฐาน</p>
+                <p><strong>แผนการเรียน:</strong>
+                เรียนสาขาวิทยาศาสตร์ เช่น วิทยาศาสตร์การแพทย์, ฟิสิกส์, คณิตศาสตร์, สถิติ, เศรษฐศาสตร์ หรือวิศวกรรมศาสตร์</p>
+                <p><strong>อาชีพที่สอดคล้อง:</strong>
+                นักวิทยาศาสตร์การแพทย์, นักฟิสิกส์, นักคณิตศาสตร์, นักเศรษฐศาสตร์, นักวิจัย, ครูวิชาคณิตศาสตร์, ครูวิทยาศาสตร์ (ฟิสิกส์)</p>
+            `,
+            S: `
+                <strong>บุคลิก S (Social):</strong> บุคลิกที่ชอบการทำงานที่เกี่ยวข้องกับผู้คน
+                <p><strong>ลักษณะเด่น:</strong>
+                ชอบการสื่อสาร ช่วยเหลือ และให้คำแนะนำแก่ผู้อื่น<br>
+                มีความสามารถในการทำงานร่วมกับคนอื่นและสร้างความสัมพันธ์<br>
+                ชอบช่วยเหลือผู้อื่นในการแก้ปัญหาหรือการพัฒนาตนเอง</p>
+                <p><strong>แผนการเรียน:</strong>
+                เรียนสาขาที่เกี่ยวกับการสื่อสาร การดูแลสุขภาพ การศึกษาคน หรือสาขาที่เกี่ยวกับการพัฒนาคุณภาพชีวิต</p>
+                <p><strong>อาชีพที่สอดคล้อง:</strong>
+                ครู, นักสังคมสงเคราะห์, นักจิตวิทยา, พยาบาล, ครูภาษาไทย, ครูสอนสังคมศึกษา</p>
+            `,
+            C: `
+                <strong>บุคลิก C (Conventional):</strong> บุคลิกที่ชอบการทำงานที่เป็นระเบียบและมีกฎเกณฑ์
+                <p><strong>ลักษณะเด่น:</strong>
+                ชอบทำงานที่มีกฎระเบียบและการจัดการที่เป็นระเบียบ<br>
+                มีทักษะในการจัดระเบียบและทำงานตามขั้นตอนที่กำหนด<br>
+                ชอบทำงานที่สามารถคาดการณ์ผลลัพธ์ได้และมีโครงสร้างชัดเจน</p>
+                <p><strong>แผนการเรียน:</strong>
+                เรียนสาขาที่เกี่ยวข้องกับการจัดการข้อมูล การบัญชี การวางแผน และการบริหาร</p>
+                <p><strong>อาชีพที่สอดคล้อง:</strong>
+                นักบัญชี, นักวิเคราะห์ข้อมูล, นักการเงิน, ผู้จัดการโครงการ, ครูสอนบัญชี, ครูสอนคอมพิวเตอร์</p>
+            `,
+            E: `
+                <strong>บุคลิก E (Enterprising):</strong> บุคลิกที่ชอบการจัดการและความเป็นผู้นำ
+                <p><strong>ลักษณะเด่น:</strong>
+                ชอบการตัดสินใจและการเป็นผู้นำ<br>
+                มีความสามารถในการโน้มน้าวและชักจูงผู้อื่น<br>
+                มักจะมีความมั่นใจในตัวเองและมีความคิดริเริ่มในการทำงาน</p>
+                <p><strong>แผนการเรียน:</strong>
+                เรียนสาขาที่เกี่ยวข้องกับการบริหารธุรกิจ การตลาด การขาย หรือการเป็นผู้ประกอบการ</p>
+                <p><strong>อาชีพที่สอดคล้อง:</strong>
+                ผู้ประกอบการ (Entrepreneur), นักขาย, ผู้บริหารระดับสูง (CEO), นักการตลาด, ครูสอนการบริหารธุรกิจ, ครูสอนการขาย</p>
+            `,
+            A: `
+                <strong>บุคลิก A (Artistic):</strong> บุคลิกที่ชอบการแสดงออกทางความคิดสร้างสรรค์
+                <p><strong>ลักษณะเด่น:</strong>
+                ชอบการใช้จินตนาการและความคิดสร้างสรรค์ในการทำงาน<br>
+                มีความสามารถในการสร้างสรรค์ผลงานศิลปะและการออกแบบ<br>
+                มักจะมีความหลงใหลในความงามและการแสดงออกทางศิลปะ</p>
+                <p><strong>แผนการเรียน:</strong>
+                เรียนสาขาที่เกี่ยวกับศิลปะ การออกแบบ การสร้างสรรค์ หรือการแสดง</p>
+                <p><strong>อาชีพที่สอดคล้อง:</strong>
+                นักออกแบบกราฟิก, นักออกแบบแฟชั่น, นักวาดการ์ตูน, ศิลปิน, ครูสอนศิลปะ, ครูสอนดนตรี</p>
+            `
+        };
+
+        // แสดงผลลัพธ์บุคลิกภาพ
+        const resultDiv = document.getElementById('results');
+        const personalityResult = document.getElementById('personalityResult');
+        const personalityDescription = document.getElementById('personalityDescription');
+        resultDiv.style.display = 'block';
+
+        // แสดงคำอธิบายบุคลิกภาพ
+        personalityResult.innerHTML = `บุคลิกภาพที่โดดเด่นของคุณคือ <strong>${maxPersonality}</strong> ด้วยคะแนน ${maxScore}`;
+        personalityDescription.innerHTML = personalityDescriptions[maxPersonality];
+    }
+</script>
